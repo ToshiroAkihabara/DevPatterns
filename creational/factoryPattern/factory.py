@@ -5,9 +5,9 @@ from creational.factoryPattern import Song
 class SerializerFactory:
     @staticmethod
     def get_serializer(format: str):
-        if format == 'JSON':
+        if format == "JSON":
             return JsonSerializer()
-        elif format == 'XML':
+        elif format == "XML":
             return XmlSerializer()
         else:
             raise ValueError(format)
@@ -24,10 +24,10 @@ class ObjectSerializer:
 
 
 def main():
-    song = Song(song_id='1', title='C4', artist="ATL")
+    song = Song(song_id="1", title="C4", artist="ATL")
     serializer = ObjectSerializer()
-    songJson = serializer.serialize(song, 'JSON')
-    songXml = serializer.serialize(song, 'XML')
+    songJson = serializer.serialize(song, "JSON")
+    songXml = serializer.serialize(song, "XML")
     print(f"songJson: {songJson}\nsongXml: {songXml}")
 
 

@@ -2,7 +2,7 @@ from enum import Enum, auto
 from collections import namedtuple
 
 
-pizza_base = namedtuple('Pizza', ['DoughDepth', 'DoughType'])
+pizza_base = namedtuple("Pizza", ["DoughDepth", "DoughType"])
 
 
 class PizzaDoughDepth(Enum):
@@ -20,6 +20,7 @@ class PizzaSauces(Enum):
     PESTO = auto()
     BARBEQUE = auto()
     TOMATO = auto()
+    CHEESE = auto()
 
 
 class PizzaTopping(Enum):
